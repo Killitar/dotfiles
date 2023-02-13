@@ -2,13 +2,10 @@ local status, saga = pcall(require, "lspsaga")
 if (not status) then return end
 
 saga.setup({
-  ui = {
-    winblend = 10,
-    border = 'rounded',
-    colors = {
-      normal_bg = '#002b36'
+    ui = {
+        winblend = 10,
+        border = 'rounded',
     }
-  }
 })
 
 local diagnostic = require("lspsaga.diagnostic")
@@ -29,4 +26,3 @@ vim.keymap.set("v", "<leader>ca", function()
   vim.fn.feedkeys(vim.api.nvim_replace_termcodes("<C-U>", true, false, true))
   codeaction:range_code_action()
 end, { silent = true })
-

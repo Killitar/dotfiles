@@ -11,7 +11,7 @@ end
 local servers = {
     "emmet_ls",
     "jsonls",
-    "sumneko_lua",
+    "lua_ls",
     "tsserver",
     "volar",
     "pyright",
